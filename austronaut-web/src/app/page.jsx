@@ -8,17 +8,16 @@ export default function Home() {
         {/* First Image positioned behind text */}
         <div className="absolute inset-0 z-0 flex items-center justify-center">
           <Image
-            src="/cube_sat.png"
+            src="/logos/main-logo.png"
             alt="cube_sat"
-            width={900}
-            height={900}
+            width={300}
+            height={300}
             className="object-cover"
           />
         </div>
 
         {/* First Text content at bottom */}
         <div className="relative z-10 flex flex-col justify-end h-full text-white text-center px-8 pb-16">
-          <h1 className="text-6xl mb-8">AUStronaut</h1>
           <p className="max-w-4xl text-lg leading-relaxed mx-auto">
             ACSER's work is in three areas relevant to space: satellite
             navigation, small spacecraft design, and space resources. With
@@ -33,7 +32,7 @@ export default function Home() {
       <div className="relative flex flex-col h-screen w-full">
         <div className="absolute inset-0 z-0 flex items-center justify-center">
           <Image
-            src="/cube_sat2.png"
+            src="/lpphotos/cube_sat2.png"
             alt="cube_sat2"
             width={900}
             height={900}
