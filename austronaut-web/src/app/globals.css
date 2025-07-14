@@ -1,11 +1,34 @@
 @import "tailwindcss";
 
 :root {
+  --font-main: 'BigCalson', serif;
   --color--foreground: #ffffff;
   --color--background: #000000;
-  --font-silkscreen: "Silkscreen", monospace;
 }
 
 * {
-  font-family: var(--font-silkscreen);
+  font-family: var(--font-main);
+}
+
+@font-face {
+  font-family: 'Sterion';
+  src: url('/fonts/sterion.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BigCalson';
+  src: url('/fonts/bigCalson.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-sterion {
+  font-family: 'Sterion', sans-serif;
+}
+
+
+.font-bigcalson {
+  font-family: 'BigCalson', sans-serif;
 }
