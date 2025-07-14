@@ -6,7 +6,7 @@ export default function Home() {
       {/* 🚀 Hero Section: Fullscreen Video + Logo */}
       <div className="relative w-full h-screen overflow-hidden">
         {/* YouTube Background Video */}
-        <video
+        {/* <video
           autoPlay
           loop
           muted
@@ -15,7 +15,20 @@ export default function Home() {
         >
           <source src="/videos/lp-background-video.mov" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
+
+       <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none yt-wrapper">
+          <div className="yt-frame-container">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              src="https://www.youtube.com/embed/wnhvanMdx4s?autoplay=1&mute=1&controls=0&loop=1&playlist=wnhvanMdx4s&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0&disablekb=1"
+              title="Background Video"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              frameBorder="0"
+            />
+          </div>
+        </div>
 
         {/* Optional overlay for better contrast */}
         <div className="absolute inset-0 bg-black/30 z-5" />
