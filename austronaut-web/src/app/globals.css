@@ -19,7 +19,14 @@
 
 @font-face {
   font-family: 'BigCalson';
-  src: url('/fonts/bigCalson.ttf') format('truetype');
+  src: url('/fonts/big-caslon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BigCalsonItalic';
+  src: url('/fonts/big-caslon-italic.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -28,6 +35,9 @@
   font-family: 'Sterion', sans-serif;
 }
 
+.font-bigcalson-italic {
+  font-family: 'BigCalsonItalic', sans-serif;
+}
 
 .font-bigcalson {
   font-family: 'BigCalson', sans-serif;
