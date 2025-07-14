@@ -1,23 +1,25 @@
+"use client";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [showVideo, setShowVideo] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowVideo(true), 500); // 3 second delay
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="w-screen bg-black">
       {/* 🚀 Hero Section: Fullscreen Video + Logo */}
       <div className="relative w-full h-screen overflow-hidden">
-        {/* YouTube Background Video */}
-        {/* <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        {/* YouTube Background Video with fade-in */}
+        <div
+          className={`absolute top-0 left-0 w-full h-full z-0 pointer-events-none yt-wrapper transition-opacity duration-1000 ease-in-out ${
+            showVideo ? "opacity-100" : "opacity-0"
+          }`}
         >
-          <source src="/videos/lp-background-video.mov" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video> */}
-
-       <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none yt-wrapper">
           <div className="yt-frame-container">
             <iframe
               className="absolute top-0 left-0 w-full h-full object-cover"
@@ -35,34 +37,34 @@ export default function Home() {
 
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-white text-center px-8">
           {/* Logo centered over video */}
-            <Image
-              src="/logos/main-logo-transparent.png"
-              alt="cube_sat"
-              width={250}
-              height={250}
-              className="object-contain"
-            />
-            <p className="max-w-4xl text-sm text-white text-bold font-bigcalson-italic">
-              An UNSW’s student-led CubeSat mission.
-            </p>
+          <Image
+            src="/logos/main-logo-transparent.png"
+            alt="cube_sat"
+            width={250}
+            height={250}
+            className="object-contain"
+          />
+          <p className="max-w-4xl text-sm text-white font-bigcalson-italic mt-4">
+            An UNSW student-led CubeSat mission.
+          </p>
         </div>
       </div>
 
       {/* 🛰️ Section 1 */}
-      <div className="relative flex flex-col w-full py-25">
-        <div className="relative z-10 flex flex-col justify-start text-white text-center">
+      <div className="relative flex flex-col w-full py-24">
+        <div className="relative z-10 flex flex-col justify-start text-white text-center px-8">
           <h1 className="text-5xl mb-10 font-sterion">WE ARE THE Austronauts</h1>
-          <p className="max-w-4xl text-xl mb-10 leading-relaxed text-justify mx-auto mb-0">
-            As part of the UNSW Vertically Integrated Projects (VIP) program, 
-            our team of 12 passionate engineering students is designing 
-            and building a 6U CubeSat equipped with innovative tether payloads 
+          <p className="max-w-4xl text-xl mb-10 leading-relaxed text-justify mx-auto">
+            As part of the UNSW Vertically Integrated Projects (VIP) program,
+            our team of 12 passionate engineering students is designing
+            and building a 6U CubeSat equipped with innovative tether payloads
             and scientific instruments to measure charged particles and magnetic
-            fields in Earth’s ionosphere
+            fields in Earth’s ionosphere.
           </p>
-          <p className="max-w-4xl text-xl leading-relaxed font-bigcalson-italic text-justify mx-auto mb-0">
-            Our mission is to advance space science 
-            while providing real-world aerospace experience to the next generation 
-            of engineers. Explore our journey from design and build to launch and 
+          <p className="max-w-4xl text-xl leading-relaxed font-bigcalson-italic text-justify mx-auto">
+            Our mission is to advance space science
+            while providing real-world aerospace experience to the next generation
+            of engineers. Explore our journey from design and build to launch and
             operations.
           </p>
         </div>
