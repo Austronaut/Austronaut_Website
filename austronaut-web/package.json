@@ -2,6 +2,7 @@
   "name": "austronaut-web",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,11 +20,8 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
     "@types/react-dom": "^19",
     "tailwindcss": "^4",
-    "tw-animate-css": "^1.3.4",
-    "typescript": "^5"
+    "tw-animate-css": "^1.3.4"
   }
 }
