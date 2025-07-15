@@ -10,6 +10,14 @@
   font-family: var(--font-main);
 }
 
+html, body {
+  background-color: var(--color--background);
+  color: var(--color--foreground); /* optional: to ensure white text */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
 @font-face {
   font-family: 'Sterion';
   src: url('/fonts/sterion.ttf') format('truetype');
@@ -42,6 +50,21 @@
 .font-bigcalson {
   font-family: 'BigCalson', sans-serif;
 }
+
+.font-inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-inter-bold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
 
 /*For the video background, referenced from 
 https://github.com/WhiskeyWeb/video-tutorials/blob/main/YouTube-hideinfo.css*/
