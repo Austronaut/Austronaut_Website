@@ -52,19 +52,19 @@ export default function Home() {
 
       {/* 🧭 Section A: Image Left, Text Right */}
       <div className="w-full flex justify-center py-16 px-4 bg-black">
-        <div className="flex flex-col md:flex-row border-2 border-white rounded-lg overflow-hidden w-full max-w-6xl">
+        <div className="flex flex-col md:flex-row-reverse rounded-lg overflow-hidden w-full max-w-6xl">
           {/* Image */}
           <div className="w-full md:w-1/2 rounded-lg">
             <img
-              src="/lpphotos/cube_sat.png"
+              src="/lpphotos/stub-team.jpeg"
               alt="UNSW ECO SAT IMAGE"
-              className="px-10 py-10 object-cover rounded-lg"
+              className="px-10 py-20 object-cover rounded-lg"
             />
           </div>
 
           {/* Text */}
           <div className="w-full md:w-1/2 flex flex-col justify-center p-10 text-white bg-black">
-            <h2 className="text-5xl font-inter-bold mb-4">WE ARE THE AUSTRONAUTS</h2>
+            <h2 className="text-6xl font-inter-bold mb-4">WE ARE THE AUSTRONAUTS</h2>
             <p className="text-md text-justify font-inter-regular leading-relaxed">
               As part of the UNSW Vertically Integrated Projects (VIP) program,
               our team of 12 passionate engineering students is designing
@@ -89,7 +89,7 @@ export default function Home() {
       
       
       <div className="w-full flex justify-center mb-10 px-4 bg-black">
-        <div className="flex flex-col md:flex-row-reverse border-2 border-white rounded-lg overflow-hidden w-full max-w-6xl">
+        <div className="flex flex-col md:flex-row rounded-lg overflow-hidden w-full max-w-6xl">
           {/* QB50 Animation Video */}
           <div className="w-full m-10 md:w-1/2 transition-opacity duration-1000 ease-in-out">
               <video
@@ -120,6 +120,26 @@ export default function Home() {
           </div>
         </div>
       </div>
+      
+      {/* <div className="mb-10 relative w-full h-screen overflow-hidden">
+        <div
+          className={`absolute p-30 justify-center top-0 left-0 w-full h-full z-0 pointer-events-none yt-wrapper transition-opacity duration-1000 ease-in-out ${
+            showVideo ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <div className="yt-frame-container">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              src="https://www.youtube.com/embed/2Cen3uMG_ik?autoplay=1&mute=1&controls=0&loop=1&playlist=2Cen3uMG_ik&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0&disablekb=1&cc_load_policy=1"
+              title="Background Video"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              frameBorder="0"
+            />
+          </div>
+        </div>
+      </div> 
+      */}
     
 
       {/* 🛰️ Section 2
