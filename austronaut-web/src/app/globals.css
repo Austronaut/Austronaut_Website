@@ -58,6 +58,13 @@ html, body {
   font-style: normal;
 }
 
+.font-inter-italic {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
 .font-inter-bold {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;

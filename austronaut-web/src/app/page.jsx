@@ -1,6 +1,14 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel.jsx";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Home() {
   const [showVideo, setShowVideo] = useState(false);
@@ -51,20 +59,20 @@ export default function Home() {
       </div>
 
       {/* 🧭 Section A: Image Left, Text Right */}
-      <div className="w-full flex justify-center py-16 px-4 bg-black">
+      <div className="w-full flex justify-center py-30 px-4 bg-black">
         <div className="flex flex-col md:flex-row-reverse rounded-lg overflow-hidden w-full max-w-6xl">
           {/* Image */}
           <div className="w-full md:w-1/2 rounded-lg">
             <img
               src="/lpphotos/stub-team.jpeg"
-              alt="UNSW ECO SAT IMAGE"
-              className="px-10 py-20 object-cover rounded-lg"
+              alt="Austronauts Team Image"
+              className="object-cover rounded-lg"
             />
           </div>
 
           {/* Text */}
           <div className="w-full md:w-1/2 flex flex-col justify-center p-10 text-white bg-black">
-            <h2 className="text-6xl font-inter-bold mb-4">WE ARE THE AUSTRONAUTS</h2>
+            <h2 className="text-6xl font-inter-bold tracking-tight mb-4">WE ARE THE AUSTRONAUTS</h2>
             <p className="text-md text-justify font-inter-regular leading-relaxed">
               As part of the UNSW Vertically Integrated Projects (VIP) program,
               our team of 12 passionate engineering students is designing
@@ -75,6 +83,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      
 
       {/* 🛰️ Mission Objective */}
       {/* <div className="w-full flex justify-center px-4 bg-black">
@@ -88,7 +97,7 @@ export default function Home() {
       </div> */}
       
       
-      <div className="w-full flex justify-center mb-10 px-4 bg-black">
+      <div className="w-full flex justify-center mb-30 px-4 bg-black">
         <div className="flex flex-col md:flex-row rounded-lg overflow-hidden w-full max-w-6xl">
           {/* QB50 Animation Video */}
           <div className="w-full m-10 md:w-1/2 transition-opacity duration-1000 ease-in-out">
@@ -106,7 +115,7 @@ export default function Home() {
 
           {/* Text */}
           <div className="w-full md:w-1/2 flex flex-col justify-center p-8 text-white bg-black">
-            <h2 className="text-8xl font-inter-bold mb-4">Our Flagship Project</h2>
+            <h2 className="text-8xl font-inter-bold tracking-tight mb-4">Our Flagship Project</h2>
             <p className="text-md text-justify font-inter-regular leading-relaxed">
               The QB50 project is a network of 50 cube satellites (CubeSats) that
               were launched together in December 2016 into a 'string-of-pearls'
@@ -117,6 +126,33 @@ export default function Home() {
               Mass Spectrometer instrument to study the composition of the
               thermosphere.
             </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full flex justify-center mb-30 px-4 bg-black">
+        <div className="flex flex-col md:flex-row-reverse rounded-lg overflow-hidden w-full max-w-6xl">
+          {/* Dempter's Photo */}
+          <div className="w-full md:w-1/2 rounded-lg">
+            <img
+              src="/lpphotos/andrew-headshot.jpg"
+              alt="Andrew Dempster Headshot"
+              className="ml-5 object-cover rounded-lg"
+            />
+          </div>
+
+          {/* Text */}
+          <div className="w-full md:w-1/2 flex flex-col justify-center p-8 text-white bg-black">
+            <h2 className="scroll-m-20 mb-10 text-left text-8xl font-inter-bold tracking-tight">Meet Our Academic</h2>
+            <h2 className="scroll-m-20 mb-1 text-left text-4xl font-inter-bold tracking-tight">Dr. Andrew Dempster</h2>
+            <h4 className="text-gray-400 mb-4 text-sm font-inter-regular tracking-tight text-balance">PhD (Cambridge) 1995, Electical Engineering and Telecommunications</h4>
+            <h4 className="text-gray-100 mb-8 text-2xl font-inter-regular tracking-tight text-balance">Director of the Australian centre for space engineering research (ACSER)</h4>
+            <h4 className="text-2xl font-inter-bold tracking-tight text-balance">Current Research</h4>
+            <ul className="ml-6 list-disc [&>li]:mt-2 [&>li]:font-inter-regular">
+              <li className="mt-2 font-inter-regular text-justify mr-10">All areas relevant to GPS receiver design and signal processing, including all new GNSS systems and signals, interference, multipath, and hardware optimisation. New location technologies such as Locata and WiFi.</li>
+              <li className="mt-2 font-inter-regular text-balance">Developing GNSS reflectometry for space and airborne platforms.</li>
+              <li className="mt-2 font-inter-regular text-balance">Developing space resources, specifically the <span className="font-inter-regular underline">Wilde</span> project.</li>
+            </ul>
           </div>
         </div>
       </div>
