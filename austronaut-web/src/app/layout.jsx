@@ -1,5 +1,5 @@
 // app/layout.tsx (or pages/_app.tsx)
-import { Silkscreen } from "next/font/google";
+import { Silkscreen, Inter } from "next/font/google";
 import "./globals.css";
 
 const silkscreen = Silkscreen({
@@ -9,12 +9,16 @@ const silkscreen = Silkscreen({
   display: "swap",
 });
 
-export default function RootLayout({
-  children,
-}) {
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={silkscreen.variable}>
-      <body className={silkscreen.className}>{children}</body>
+    <html lang="en" className={`${silkscreen.variable} ${inter.variable}`}>
+      <body className={`${silkscreen.className}`}>{children}</body>
     </html>
   );
 }

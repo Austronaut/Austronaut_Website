@@ -10,6 +10,14 @@
   font-family: var(--font-main);
 }
 
+html, body {
+  background-color: var(--color--background);
+  color: var(--color--foreground); /* optional: to ensure white text */
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
 @font-face {
   font-family: 'Sterion';
   src: url('/fonts/sterion.ttf') format('truetype');
@@ -19,7 +27,14 @@
 
 @font-face {
   font-family: 'BigCalson';
-  src: url('/fonts/bigCalson.ttf') format('truetype');
+  src: url('/fonts/big-caslon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BigCalsonItalic';
+  src: url('/fonts/big-caslon-italic.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -28,7 +43,65 @@
   font-family: 'Sterion', sans-serif;
 }
 
+.font-bigcalson-italic {
+  font-family: 'BigCalsonItalic', sans-serif;
+}
 
 .font-bigcalson {
   font-family: 'BigCalson', sans-serif;
+}
+
+.font-inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-inter-italic {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.font-inter-bold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+/*For the video background, referenced from 
+https://github.com/WhiskeyWeb/video-tutorials/blob/main/YouTube-hideinfo.css*/
+@media screen and (min-width: 768px) {
+  .yt-wrapper {
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .yt-frame-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-top: 25px;
+    width: 300%;
+    left: -100%;
+  }
+
+  .yt-frame-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .yt-frame-container iframe {
+    aspect-ratio: 16 / 9;
+    pointer-events: none;
+  }
 }
