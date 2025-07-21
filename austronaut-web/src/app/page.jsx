@@ -9,6 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel.jsx";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Timeline from "./landing-page/lp-timeline";
 
 export default function Home() {
   const [showVideo, setShowVideo] = useState(false);
@@ -157,83 +158,10 @@ export default function Home() {
               <h2 className="scroll-m-20 mb-1 text-center text-lg font-inter-regular tracking-tight">To research, design and launch a 6U cubesat to measure space weather.</h2>
         </div>
 
-        <div className="w-full flex justify-center items-center p-8 text-white bg-black">
-          <div className="relative w-full max-w-[1080px]">
-          <Carousel orientation="horizontal" className="w-full max-w-[1280px] border-2 rounded-lg">
-            <CarouselContent className="w-full h-full max-h-[80vh]">
-
-              {/* === Item 1 === */}
-              <CarouselItem className="w-full">
-                <Card className="relative w-full mx-auto border-0 aspect-[16/9] overflow-hidden max-h-[80vh]">
-                  <CardContent className="p-0 w-full h-full">
-                    <img
-                      src="/project-stages/1.png"
-                      alt="Research and Development"
-                      className="object-cover w-full h-full"
-                    />
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-
-              {/* === Item 2 === */}
-              <CarouselItem className="w-full">
-                <Card className="relative w-full mx-auto border-0 aspect-[16/9] overflow-hidden max-h-[80vh]">
-                  <CardContent className="p-0 w-full h-full">
-                    <img
-                      src="/project-stages/2.png"
-                      alt="Design and Fabrication"
-                      className="object-cover w-full h-full"
-                    />
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-
-              {/* === Item 3 === */}
-              <CarouselItem className="w-full">
-                <Card className="relative w-full mx-auto border-0 aspect-[16/9] overflow-hidden max-h-[80vh]">
-                  <CardContent className="p-0 w-full h-full">
-                    <img
-                      src="/project-stages/3.png"
-                      alt="Assembly, Testing and Launch"
-                      className="object-cover w-full h-full"
-                    />
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-
-              {/* === Item 4 === */}
-              <CarouselItem className="w-full">
-                <Card className="relative w-full mx-auto border-0 aspect-[16/9] overflow-hidden max-h-[80vh]">
-                  <CardContent className="p-0 w-full h-full">
-                    <img
-                      src="/project-stages/4.png"
-                      alt="Data Collection & Operations"
-                      className="object-cover w-full h-full"
-                    />
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-
-              {/* === Item 5 === */}
-              <CarouselItem className="w-full">
-                <Card className="relative w-full mx-auto border-0 aspect-[16/9] overflow-hidden max-h-[80vh]">
-                  <CardContent className="p-0 w-full h-full">
-                    <img
-                      src="/project-stages/5.png"
-                      alt="De-Orbiting & Closeout"
-                      className="object-cover w-full h-full"
-                    />
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-
-            </CarouselContent>
-
-            <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-30"/>
-            <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-30"/>
-          </Carousel>
-        </div>
-        </div>
+      <div className="w-full flex justify-center p-10 bg-black">
+        <Timeline/>
+      </div>
+    
     </div>
 
       
