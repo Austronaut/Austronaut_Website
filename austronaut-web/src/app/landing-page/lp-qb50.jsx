@@ -34,16 +34,16 @@ export default function QB50Section() {
 
     return (
        <div className="w-full mb-15 bg-black text-white">
-        <div className="w-full">
+        <div className="w-full mb-5">
             <ScrollVelocity
                 texts={['OUR FLAGSHIP PROJECT QB50']} 
                 velocity={10} 
-                className="font-inter-bold text-4xl md:text-8xl"
+                className="font-inter-bold text-5xl md:text-8xl"
             />
             <ScrollVelocity
                 texts={['OUR FLAGSHIP PROJECT QB50']} 
                 velocity={10} 
-                className="font-inter-italic text-4xl md:text-8xl"
+                className="font-inter-italic text-5xl md:text-8xl"
             />
         </div>
         <div className="w-full p-5 md:p-20 flex flex-wrap justify-center gap-10">
