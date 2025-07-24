@@ -12,6 +12,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Timeline from "./landing-page/lp-timeline";
 import SpotlightCard from "@/components/ui/spotlight";
 import QB50Section from "./landing-page/lp-qb50";
+import AndrewDempsterSection from "./landing-page/lp-ademp";
+import CurvedLoop from "@/components/ui/curved-loop";
+import ScrollVelocity from "@/components/ui/scrollvelocity";
 
 export default function Home() {
   const [showVideo, setShowVideo] = useState(false);
@@ -136,39 +139,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full flex justify-center mb-10 bg-black">
-        <div className="flex flex-col md:flex-row rounded-lg overflow-hidden w-full max-w-6xl gap-10">
-          {/* QB50 Animation Video */}
-          <QB50Section/>
-        </div>
-      </div>
+      <QB50Section/>
 
-      <div className="w-full flex justify-center bg-black">
-        <div className="flex flex-col md:flex-row-reverse rounded-lg overflow-hidden w-full max-w-6xl gap-10">
-          {/* Dempter's Photo */}
-          <div className="w-full rounded-lg p-10">
-            <img
-              src="/lpphotos/andrew-headshot.jpg"
-              alt="Andrew Dempster Headshot"
-              className="object-cover rounded-lg"
-            />
-          </div>
+      <h2 className="text-center text-8xl font-inter-bold tracking-tight object-contain hover:scale-105 transition duration-300 ease-in-out ">The <span className="font-inter-bold-italic underline decoration-yellow-600 underline-offset-10 decoration-2">Academic</span> Lead</h2>
 
-          {/* Text */}
-          <div className="w-full h-full flex flex-col justify-center text-white bg-black">
-            <h2 className="scroll-m-20 mb-10 text-left text-8xl font-inter-bold tracking-tight object-contain">Meet Our Academic</h2>
-            <h2 className="scroll-m-20 mb-1 text-left text-4xl font-inter-bold tracking-tight">Dr. Andrew Dempster</h2>
-            <h4 className="text-gray-400 mb-4 text-sm font-inter-regular tracking-tight text-balance">PhD (Cambridge) 1995, Electical Engineering and Telecommunications</h4>
-            <h4 className="text-gray-100 mb-8 text-2xl font-inter-regular tracking-tight text-balance">Director of the Australian centre for space engineering research (ACSER)</h4>
-            <h4 className="text-2xl font-inter-bold tracking-tight text-balance">Current Research</h4>
-            <ul className="ml-6 list-disc [&>li]:mt-2 [&>li]:font-inter-regular">
-              <li className="mt-2 font-inter-regular text-justify">All areas relevant to GPS receiver design and signal processing, including all new GNSS systems and signals, interference, multipath, and hardware optimisation. New location technologies such as Locata and WiFi.</li>
-              <li className="mt-2 font-inter-regular text-balanced">Developing GNSS reflectometry for space and airborne platforms.</li>
-              <li className="mt-2 font-inter-regular text-balance">Developing space resources, specifically the <span className="font-inter-regular underline">Wilde</span> project.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <AndrewDempsterSection/>
+
     </div>
 
   );

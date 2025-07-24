@@ -33,8 +33,8 @@ export default function QB50Section() {
     ];
 
     return (
-       <div className="w-full mb-30 bg-black text-white">
-        <div className="w-full mb-20">
+       <div className="w-full mb-15 bg-black text-white">
+        <div className="w-full">
             <ScrollVelocity
                 texts={['OUR FLAGSHIP PROJECT QB50']} 
                 velocity={10} 
@@ -46,29 +46,29 @@ export default function QB50Section() {
                 className="font-inter-italic text-4xl md:text-8xl"
             />
         </div>
-        <div className="w-full p-5 md:p-0 flex flex-wrap justify-center gap-10">
-        {cards.map((card, index) => (
-            <div
-            key={index}
-            className="relative rounded-2xl overflow-hidden shadow-stone-800 shadow-md hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out w-full sm:w-[90%] md:w-[30%] h-80"
-            >
-            {/* Full video background */}
-            <video
-                className="absolute inset-0 w-full h-full object-cover"
-                src={card.videoSrc}
-                autoPlay
-                muted
-                loop
-                playsInline
-            />
+        <div className="w-full p-5 md:p-20 flex flex-wrap justify-center gap-10">
+            {cards.map((card, index) => (
+                <div
+                key={index}
+                className="relative rounded-2xl shadow-md hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out w-full sm:w-[90%] md:w-[30%] h-80"
+                >
+                    {/* Full video background */}
+                    <video
+                        className="absolute inset-0 rounded-2xl w-full h-full object-cover"
+                        src={card.videoSrc}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                    />
 
-            {/* Overlay */}
-            <div className="relative z-10 w-full h-full rounded-2xl border flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6">
-                <h3 className="text-2xl font-inter-bold-italic text-white mb-2 text-center">{card.title}</h3>
-                <p className="text-sm text-gray-200 font-inter-italic text-center">{card.description}</p>
-            </div>
-            </div>
-        ))}
+                {/* Overlay */}
+                    <div className="relative z-10 w-full h-full rounded-2xl border-1 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6">
+                        <h3 className="text-2xl font-inter-bold-italic text-white mb-2 text-center">{card.title}</h3>
+                        <p className="text-sm text-gray-200 font-inter-italic text-center">{card.description}</p>
+                    </div>
+                </div>
+            ))}
         </div>
     </div>
     );

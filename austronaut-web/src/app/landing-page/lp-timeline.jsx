@@ -13,7 +13,7 @@ import SpotlightCard from "@/components/ui/spotlight";
 
 export default function Timeline(){
     return (
-        <div className="flex flex-col md:flex-row-reverse rounded-lg overflow-hidden w-full max-w-6xl gap-10">
+        <div className="p-1 flex flex-col md:flex-row-reverse rounded-lg overflow-hidden w-full max-w-6xl gap-10">
             <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
             <li>
                 <div className="timeline-middle">
@@ -30,8 +30,8 @@ export default function Timeline(){
                     />
                 </svg>
                 </div>
-                <div className="timeline-start mb-10 md:text-end">
-                    <SpotlightCard className="custom-spotlight-card transform hover:scale-102 transition duration-300 ease-in-out" spotlightColor="rgba(242, 0, 255, 0.2)">
+                <div className="timeline-start md:text-end">
+                    <SpotlightCard className="custom-spotlight-card transform hover:scale-102 transition duration-300 ease-in-out border-pink-500" spotlightColor="rgba(242, 0, 255, 0.2)">
                             <time className="font-mono font-inter-italic">2025</time>
                             <div className="text-2xl font-inter-bold font-black mb-2">Research & Development</div>
                             <p className="font-inter-italic font-xs text-right">
@@ -58,7 +58,7 @@ export default function Timeline(){
                 </svg>
                 </div>
                 <div className="timeline-end md:mb-10">
-                    <SpotlightCard className="custom-spotlight-card transform hover:scale-102 transition duration-300 ease-in-out" spotlightColor="rgba(0, 229, 255, 0.2)">
+                    <SpotlightCard className="custom-spotlight-card transform hover:scale-102 transition duration-300 ease-in-out border-sky-500" spotlightColor="rgba(0, 229, 255, 0.2)">
                         <time className="font-mono font-inter-italic">2026</time>
                         <div className="text-2xl font-inter-bold font-black mb-2">Design & Fabrication</div>
                             <p className="font-inter-italic font-xs text-left">
@@ -84,8 +84,8 @@ export default function Timeline(){
                     />
                 </svg>
                 </div>
-                <div className="timeline-start mb-10 md:text-end">
-                    <SpotlightCard className="custom-spotlight-card transform hover:scale-102 transition duration-300 ease-in-out" spotlightColor="rgba(255, 123, 0, 0.2)">
+                <div className="timeline-start md:text-end">
+                    <SpotlightCard className="custom-spotlight-card transform hover:scale-102 transition duration-300 ease-in-out border-orange-500" spotlightColor="rgba(255, 123, 0, 0.2)">
                     <time className="font-mono font-inter-italic">2027</time>
                     <div className="text-2xl font-inter-bold font-black mb-2">Assembly, Testing & Launch</div>
                         <p className="font-inter-italic font-xs text-right">
@@ -112,7 +112,7 @@ export default function Timeline(){
                 </svg>
                 </div>
                 <div className="timeline-end md:mb-10">
-                <SpotlightCard className="custom-spotlight-card border border-green-400 transform hover:scale-102 transition duration-300 ease-in-out" spotlightColor="rgba(13, 255, 0, 0.2)">
+                <SpotlightCard className="custom-spotlight-card transform hover:scale-102 transition duration-300 ease-in-out border-teal-500" spotlightColor="rgba(13, 255, 0, 0.2)">
                     <time className="font-mono font-inter-italic">2028</time>
                     <div className="text-2xl font-inter-bold font-black mb-2">Data Collection & Operations</div>
                         <p className="font-inter-italic font-xs text-left">
@@ -139,7 +139,7 @@ export default function Timeline(){
                 </svg>
                 </div>
                 <div className="timeline-start mb-10 md:text-end">
-                    <SpotlightCard className="custom-spotlight-card transform hover:scale-102 transition duration-300 ease-in-out" spotlightColor="rgba(38, 0, 96, 0.2)">
+                    <SpotlightCard className="custom-spotlight-card transform hover:scale-102 transition duration-300 ease-in-out border-purple-500" spotlightColor="rgba(38, 0, 96, 0.2)">
                     <time className="font-mono font-inter-italic">2029</time>
                     <div className="text-2xl font-inter-bold font-black mb-2">De-orbiting and Closeout</div>
                         <p className="font-inter-italic font-xs text-right">
