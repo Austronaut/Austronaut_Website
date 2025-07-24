@@ -90,14 +90,14 @@ export default function Home() {
       <div className="w-full flex justify-center mt-10 mb-10 bg-black">
         <div className="flex flex-row rounded-lg overflow-hidden w-full max-w-6xl gap-10">
           <div className="w-full px-6 py-12 bg-black text-white">
-            <h2 className="text-4xl md:text-8xl font-bold text-center mb-12 font-inter-bold">WE ARE THE AUSTRONAUTS</h2>
+            <h2 className="text-4xl md:text-8xl text-center mb-12 font-inter-bold">WE ARE THE <span className="bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent font-inter-bold">AUS</span>TRONAUTS</h2>
             <div className="flex flex-wrap justify-center gap-6">
               {cards.map((card, index) => (
                 <div
                   key={index}
                   className="p-6 rounded-2xl shadow-blue shadow-md hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out w-full sm:w-[90%] md:w-[30%]"
                 >
-                <SpotlightCard key={index} className="p-6 rounded-2xl border-white" spotlightColor="rgba(255, 212, 251, 0.2)">
+                <SpotlightCard key={index} className="p-6 rounded-2xl border-yellow-200" spotlightColor="rgba(255, 191, 0, 0.2)">
                     <div className="flex justify-center mb-4">{card.icon}</div>
                     <h3 className="text-2xl font-inter-bold text-center mb-4">{card.title}</h3>
                     <p className="text-base font-inter-italic text-center text-gray-300">{card.description}</p>

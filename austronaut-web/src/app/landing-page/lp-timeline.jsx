@@ -112,7 +112,7 @@ export default function Timeline(){
                 </svg>
                 </div>
                 <div className="timeline-end md:mb-10">
-                <SpotlightCard className="custom-spotlight-card transform hover:scale-102 transition duration-300 ease-in-out" spotlightColor="rgba(13, 255, 0, 0.2)">
+                <SpotlightCard className="custom-spotlight-card border border-green-400 transform hover:scale-102 transition duration-300 ease-in-out" spotlightColor="rgba(13, 255, 0, 0.2)">
                     <time className="font-mono font-inter-italic">2028</time>
                     <div className="text-2xl font-inter-bold font-black mb-2">Data Collection & Operations</div>
                         <p className="font-inter-italic font-xs text-left">
