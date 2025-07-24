@@ -97,7 +97,7 @@ export default function Home() {
                   key={index}
                   className="p-6 rounded-2xl shadow-blue shadow-md hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out w-full sm:w-[90%] md:w-[30%]"
                 >
-                <SpotlightCard key={index} className="p-6 rounded-2xl" spotlightColor="rgba(255, 212, 251, 0.2)">
+                <SpotlightCard key={index} className="p-6 rounded-2xl border-white" spotlightColor="rgba(255, 212, 251, 0.2)">
                     <div className="flex justify-center mb-4">{card.icon}</div>
                     <h3 className="text-2xl font-inter-bold text-center mb-4">{card.title}</h3>
                     <p className="text-base font-inter-italic text-center text-gray-300">{card.description}</p>
