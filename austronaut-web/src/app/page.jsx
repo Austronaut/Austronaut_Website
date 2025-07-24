@@ -140,7 +140,7 @@ export default function Home() {
 
           {/* Text */}
           <div className="w-full flex flex-col justify-center text-white bg-black">
-            <h2 className="text-8xl font-inter-bold tracking-tight mb-4 break-words">Our Flagship Project</h2>
+            <h2 className="text-4xl md:text-8xl font-inter-bold tracking-tight mb-4 break-words">Our Flagship Project</h2>
             <p className="text-md text-justify font-inter-regular leading-relaxed">
               The QB50 project is a network of 50 cube satellites (CubeSats) that
               were launched together in December 2016 into a 'string-of-pearls'
