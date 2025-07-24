@@ -11,6 +11,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Timeline from "./landing-page/lp-timeline";
 import SpotlightCard from "@/components/ui/spotlight";
+import QB50Section from "./landing-page/lp-qb50";
 
 export default function Home() {
   const [showVideo, setShowVideo] = useState(false);
@@ -87,10 +88,10 @@ export default function Home() {
       </div>
 
       {/* 🧭 Section A: Image Left, Text Right */}
-      <div className="w-full flex justify-center mt-10 mb-10 bg-black">
+      <div className="w-full flex justify-center mt-30 mb-10 bg-black">
         <div className="flex flex-row rounded-lg overflow-hidden w-full max-w-6xl gap-10">
-          <div className="w-full px-6 py-12 bg-black text-white">
-            <h2 className="text-4xl md:text-8xl text-center mb-12 font-inter-bold">WE ARE THE <span className="bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent font-inter-bold">AUS</span>TRONAUTS</h2>
+          <div className="w-full bg-black text-white">
+            <h2 className="text-4xl md:text-8xl text-center mb-12 font-inter-bold">WE ARE THE AUS<span className="font-inter-regular">TRONAUTS</span></h2>
             <div className="flex flex-wrap justify-center gap-6">
               {cards.map((card, index) => (
                 <div
@@ -121,44 +122,31 @@ export default function Home() {
           </div>
       </div> */}
       
-      
-      <div className="w-full flex justify-center p-10 mb-10 bg-black">
-        <div className="flex flex-col md:flex-row rounded-lg overflow-hidden w-full max-w-6xl gap-10">
-          {/* QB50 Animation Video */}
-          <div className="w-full transition-opacity duration-1000 ease-in-out">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover rounded-lg"
-              >
-                <source src="/videos/unsw-eco.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-          </div>
 
-          {/* Text */}
-          <div className="w-full flex flex-col justify-center text-white bg-black">
-            <h2 className="text-4xl md:text-8xl font-inter-bold tracking-tight mb-4 break-words">Our Flagship Project</h2>
-            <p className="text-md text-justify font-inter-regular leading-relaxed">
-              The QB50 project is a network of 50 cube satellites (CubeSats) that
-              were launched together in December 2016 into a 'string-of-pearls'
-              configuration in a circular orbit at 320 km altitude, inclination 79
-              degrees. The UNSW contribution to the QB50 project began in 2012,
-              with a boost of $250,000 secured for the project by Dr Elias
-              Aboutanios. The satellite, named UNSW-EC0, carried an Ion Neutral
-              Mass Spectrometer instrument to study the composition of the
-              thermosphere.
-            </p>
-          </div>
+      {/*Need to create a seperate react jsx component file for this*/}
+      <div className="w-full flex flex-col justify-center items-center mb-20 bg-black">
+
+        <div className="w-full flex flex-col justify-center p-10 text-white bg-black">
+              <h2 className="mb-7 text-center text-8xl font-inter-bold tracking-tight object-contain">Project 2027</h2>
+              <h2 className="mb-7 mb-1 text-center text-lg font-inter-regular tracking-tight">To research, design and launch a 6U cubesat to measure space weather.</h2>
+        </div>
+
+        <div className="w-full flex justify-center bg-black">
+          <Timeline/>
         </div>
       </div>
 
-      <div className="w-full flex justify-center p-10 bg-black">
+      <div className="w-full flex justify-center mb-10 bg-black">
+        <div className="flex flex-col md:flex-row rounded-lg overflow-hidden w-full max-w-6xl gap-10">
+          {/* QB50 Animation Video */}
+          <QB50Section/>
+        </div>
+      </div>
+
+      <div className="w-full flex justify-center bg-black">
         <div className="flex flex-col md:flex-row-reverse rounded-lg overflow-hidden w-full max-w-6xl gap-10">
           {/* Dempter's Photo */}
-          <div className="w-full rounded-lg">
+          <div className="w-full rounded-lg p-10">
             <img
               src="/lpphotos/andrew-headshot.jpg"
               alt="Andrew Dempster Headshot"
@@ -167,7 +155,7 @@ export default function Home() {
           </div>
 
           {/* Text */}
-          <div className="w-full h-full flex flex-col justify-center p-8 text-white bg-black">
+          <div className="w-full h-full flex flex-col justify-center text-white bg-black">
             <h2 className="scroll-m-20 mb-10 text-left text-8xl font-inter-bold tracking-tight object-contain">Meet Our Academic</h2>
             <h2 className="scroll-m-20 mb-1 text-left text-4xl font-inter-bold tracking-tight">Dr. Andrew Dempster</h2>
             <h4 className="text-gray-400 mb-4 text-sm font-inter-regular tracking-tight text-balance">PhD (Cambridge) 1995, Electical Engineering and Telecommunications</h4>
@@ -181,48 +169,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/*Need to create a seperate react jsx component file for this*/}
-      <div className="w-full flex flex-col p-10 justify-center items-center mb-10 bg-black">
-
-        <div className="w-full flex flex-col justify-center p-8 text-white bg-black">
-              <h2 className="scroll-m-20 mb-7 text-center text-8xl font-inter-bold tracking-tight object-contain">Project 2027</h2>
-              <h2 className="scroll-m-20 mb-1 text-center text-lg font-inter-regular tracking-tight">To research, design and launch a 6U cubesat to measure space weather.</h2>
-        </div>
-
-      <div className="w-full flex justify-center p-10 bg-black">
-        <Timeline/>
-      </div>
-    
     </div>
 
-      
-      {/* <div className="mb-10 relative w-full h-screen overflow-hidden">
-        <div
-          className={`absolute p-30 justify-center top-0 left-0 w-full h-full z-0 pointer-events-none yt-wrapper transition-opacity duration-1000 ease-in-out ${
-            showVideo ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <div className="yt-frame-container">
-            <iframe
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              src="https://www.youtube.com/embed/2Cen3uMG_ik?autoplay=1&mute=1&controls=0&loop=1&playlist=2Cen3uMG_ik&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0&disablekb=1&cc_load_policy=1"
-              title="Background Video"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-              frameBorder="0"
-            />
-          </div>
-        </div>
-      </div> 
-      */}
-    
-
-      {/* 🛰️ Section 2
-      <div className="relative flex flex-col h-screen w-full">
-        <div className="absolute inset-0 z-0 flex items-center justify-center">
-        </div>
-      </div> */}
-    </div>
   );
 }
