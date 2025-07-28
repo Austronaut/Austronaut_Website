@@ -11,6 +11,11 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Timeline from "./landing-page/lp-timeline";
 import SpotlightCard from "@/components/ui/spotlight";
+import QB50Section from "./landing-page/lp-qb50";
+import AndrewDempsterSection from "./landing-page/lp-ademp";
+import CurvedLoop from "@/components/ui/curved-loop";
+import ScrollVelocity from "@/components/ui/scrollvelocity";
+import WebsiteFooter from "./others/website-footer";
 
 export default function Home() {
   const [showVideo, setShowVideo] = useState(false);
@@ -27,7 +32,7 @@ export default function Home() {
         'Team of 12 passionate multidisciplinary engineering students from UNSW',
       icon: (
       <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-        <path fill-rule="evenodd" d="M10.915 2.345a2 2 0 0 1 2.17 0l7 4.52A2 2 0 0 1 21 8.544V9.5a1.5 1.5 0 0 1-1.5 1.5H19v6h1a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2h1v-6h-.5A1.5 1.5 0 0 1 3 9.5v-.955a2 2 0 0 1 .915-1.68l7-4.52ZM17 17v-6h-2v6h2Zm-6-6h2v6h-2v-6Zm-2 6v-6H7v6h2Z" clip-rule="evenodd"/>
+        <path fillRule="evenodd" d="M10.915 2.345a2 2 0 0 1 2.17 0l7 4.52A2 2 0 0 1 21 8.544V9.5a1.5 1.5 0 0 1-1.5 1.5H19v6h1a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2h1v-6h-.5A1.5 1.5 0 0 1 3 9.5v-.955a2 2 0 0 1 .915-1.68l7-4.52ZM17 17v-6h-2v6h2Zm-6-6h2v6h-2v-6Zm-2 6v-6H7v6h2Z" clip-rule="evenodd"/>
         <path d="M2 21a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z"/>
       </svg>
       ),
@@ -38,7 +43,7 @@ export default function Home() {
         'Developing a 6U CubeSat with innovative tether payloads to explore Earth’s ionosphere by 2027',
       icon: (
       <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-        <path fill-rule="evenodd" d="M20.337 3.664c.213.212.354.486.404.782.294 1.711.657 5.195-.906 6.76-1.77 1.768-8.485 5.517-10.611 6.683a.987.987 0 0 1-1.176-.173l-.882-.88-.877-.884a.988.988 0 0 1-.173-1.177c1.165-2.126 4.913-8.841 6.682-10.611 1.562-1.563 5.046-1.198 6.757-.904.296.05.57.191.782.404ZM5.407 7.576l4-.341-2.69 4.48-2.857-.334a.996.996 0 0 1-.565-1.694l2.112-2.111Zm11.357 7.02-.34 4-2.111 2.113a.996.996 0 0 1-1.69-.565l-.422-2.807 4.563-2.74Zm.84-6.21a1.99 1.99 0 1 1-3.98 0 1.99 1.99 0 0 1 3.98 0Z" clip-rule="evenodd"/>
+        <path fillRule="evenodd" d="M20.337 3.664c.213.212.354.486.404.782.294 1.711.657 5.195-.906 6.76-1.77 1.768-8.485 5.517-10.611 6.683a.987.987 0 0 1-1.176-.173l-.882-.88-.877-.884a.988.988 0 0 1-.173-1.177c1.165-2.126 4.913-8.841 6.682-10.611 1.562-1.563 5.046-1.198 6.757-.904.296.05.57.191.782.404ZM5.407 7.576l4-.341-2.69 4.48-2.857-.334a.996.996 0 0 1-.565-1.694l2.112-2.111Zm11.357 7.02-.34 4-2.111 2.113a.996.996 0 0 1-1.69-.565l-.422-2.807 4.563-2.74Zm.84-6.21a1.99 1.99 0 1 1-3.98 0 1.99 1.99 0 0 1 3.98 0Z" clip-rule="evenodd"/>
       </svg>
       ),
     },
@@ -87,10 +92,10 @@ export default function Home() {
       </div>
 
       {/* 🧭 Section A: Image Left, Text Right */}
-      <div className="w-full flex justify-center mt-10 mb-10 bg-black">
+      <div className="w-full flex justify-center mt-30 mb-10 bg-black">
         <div className="flex flex-row rounded-lg overflow-hidden w-full max-w-6xl gap-10">
-          <div className="w-full px-6 py-12 bg-black text-white">
-            <h2 className="text-4xl md:text-8xl text-center mb-12 font-inter-bold">WE ARE THE <span className="bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent font-inter-bold">AUS</span>TRONAUTS</h2>
+          <div className="w-full bg-black text-white">
+            <h2 className="text-5xl md:text-8xl text-center mb-12 font-inter-bold">WE ARE THE AUS<span className="font-inter-regular">TRONAUTS</span></h2>
             <div className="flex flex-wrap justify-center gap-6">
               {cards.map((card, index) => (
                 <div
@@ -121,108 +126,29 @@ export default function Home() {
           </div>
       </div> */}
       
-      
-      <div className="w-full flex justify-center p-10 mb-10 bg-black">
-        <div className="flex flex-col md:flex-row rounded-lg overflow-hidden w-full max-w-6xl gap-10">
-          {/* QB50 Animation Video */}
-          <div className="w-full transition-opacity duration-1000 ease-in-out">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover rounded-lg"
-              >
-                <source src="/videos/unsw-eco.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-          </div>
-
-          {/* Text */}
-          <div className="w-full flex flex-col justify-center text-white bg-black">
-            <h2 className="text-4xl md:text-8xl font-inter-bold tracking-tight mb-4 break-words">Our Flagship Project</h2>
-            <p className="text-md text-justify font-inter-regular leading-relaxed">
-              The QB50 project is a network of 50 cube satellites (CubeSats) that
-              were launched together in December 2016 into a 'string-of-pearls'
-              configuration in a circular orbit at 320 km altitude, inclination 79
-              degrees. The UNSW contribution to the QB50 project began in 2012,
-              with a boost of $250,000 secured for the project by Dr Elias
-              Aboutanios. The satellite, named UNSW-EC0, carried an Ion Neutral
-              Mass Spectrometer instrument to study the composition of the
-              thermosphere.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="w-full flex justify-center p-10 bg-black">
-        <div className="flex flex-col md:flex-row-reverse rounded-lg overflow-hidden w-full max-w-6xl gap-10">
-          {/* Dempter's Photo */}
-          <div className="w-full rounded-lg">
-            <img
-              src="/lpphotos/andrew-headshot.jpg"
-              alt="Andrew Dempster Headshot"
-              className="object-cover rounded-lg"
-            />
-          </div>
-
-          {/* Text */}
-          <div className="w-full h-full flex flex-col justify-center p-8 text-white bg-black">
-            <h2 className="scroll-m-20 mb-10 text-left text-8xl font-inter-bold tracking-tight object-contain">Meet Our Academic</h2>
-            <h2 className="scroll-m-20 mb-1 text-left text-4xl font-inter-bold tracking-tight">Dr. Andrew Dempster</h2>
-            <h4 className="text-gray-400 mb-4 text-sm font-inter-regular tracking-tight text-balance">PhD (Cambridge) 1995, Electical Engineering and Telecommunications</h4>
-            <h4 className="text-gray-100 mb-8 text-2xl font-inter-regular tracking-tight text-balance">Director of the Australian centre for space engineering research (ACSER)</h4>
-            <h4 className="text-2xl font-inter-bold tracking-tight text-balance">Current Research</h4>
-            <ul className="ml-6 list-disc [&>li]:mt-2 [&>li]:font-inter-regular">
-              <li className="mt-2 font-inter-regular text-justify">All areas relevant to GPS receiver design and signal processing, including all new GNSS systems and signals, interference, multipath, and hardware optimisation. New location technologies such as Locata and WiFi.</li>
-              <li className="mt-2 font-inter-regular text-balanced">Developing GNSS reflectometry for space and airborne platforms.</li>
-              <li className="mt-2 font-inter-regular text-balance">Developing space resources, specifically the <span className="font-inter-regular underline">Wilde</span> project.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
 
       {/*Need to create a seperate react jsx component file for this*/}
-      <div className="w-full flex flex-col p-10 justify-center items-center mb-10 bg-black">
+      <div className="w-full flex flex-col justify-center items-center mb-20 bg-black">
 
-        <div className="w-full flex flex-col justify-center p-8 text-white bg-black">
-              <h2 className="scroll-m-20 mb-7 text-center text-8xl font-inter-bold tracking-tight object-contain">Project 2027</h2>
-              <h2 className="scroll-m-20 mb-1 text-center text-lg font-inter-regular tracking-tight">To research, design and launch a 6U cubesat to measure space weather.</h2>
+        <div className="w-full flex flex-col justify-center p-10 text-white bg-black">
+              <h2 className="mb-7 text-center text-8xl font-inter-bold tracking-tight object-contain">Project 2027</h2>
+              <h2 className="mb-7 mb-1 text-center text-lg font-inter-regular tracking-tight">To research, design and launch a 6U cubesat to measure space weather.</h2>
         </div>
 
-      <div className="w-full flex justify-center p-10 bg-black">
-        <Timeline/>
+        <div className="w-full flex justify-center bg-black">
+          <Timeline/>
+        </div>
       </div>
-    
-    </div>
 
+      <QB50Section/>
+
+      <div className="w-full">
+        <h2 className="text-center text-5xl md:text-8xl font-inter-bold tracking-tight object-contain hover:scale-105 transition duration-300 ease-in-out ">The <span className="font-inter-bold-italic underline decoration-yellow-600 underline-offset-10 decoration-2">Academic</span> Lead</h2>
+      </div>
+
+      <AndrewDempsterSection/>
       
-      {/* <div className="mb-10 relative w-full h-screen overflow-hidden">
-        <div
-          className={`absolute p-30 justify-center top-0 left-0 w-full h-full z-0 pointer-events-none yt-wrapper transition-opacity duration-1000 ease-in-out ${
-            showVideo ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <div className="yt-frame-container">
-            <iframe
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              src="https://www.youtube.com/embed/2Cen3uMG_ik?autoplay=1&mute=1&controls=0&loop=1&playlist=2Cen3uMG_ik&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0&disablekb=1&cc_load_policy=1"
-              title="Background Video"
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-              frameBorder="0"
-            />
-          </div>
-        </div>
-      </div> 
-      */}
-    
-
-      {/* 🛰️ Section 2
-      <div className="relative flex flex-col h-screen w-full">
-        <div className="absolute inset-0 z-0 flex items-center justify-center">
-        </div>
-      </div> */}
+      <WebsiteFooter/>
     </div>
   );
 }
