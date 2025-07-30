@@ -1,7 +1,8 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 :root {
-  --font-main: 'BigCalson', serif;
+  --font-main: "BigCalson", serif;
   --color--foreground: #ffffff;
   --color--background: #000000;
 }
@@ -10,7 +11,8 @@
   font-family: var(--font-main);
 }
 
-html, body {
+html,
+body {
   background-color: var(--color--background);
   color: var(--color--foreground); /* optional: to ensure white text */
   margin: 0;
@@ -19,36 +21,36 @@ html, body {
 }
 
 @font-face {
-  font-family: 'Sterion';
-  src: url('/fonts/sterion.ttf') format('truetype');
+  font-family: "Sterion";
+  src: url("/fonts/sterion.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'BigCalson';
-  src: url('/fonts/big-caslon.ttf') format('truetype');
+  font-family: "BigCalson";
+  src: url("/fonts/big-caslon.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'BigCalsonItalic';
-  src: url('/fonts/big-caslon-italic.ttf') format('truetype');
+  font-family: "BigCalsonItalic";
+  src: url("/fonts/big-caslon-italic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 .font-sterion {
-  font-family: 'Sterion', sans-serif;
+  font-family: "Sterion", sans-serif;
 }
 
 .font-bigcalson-italic {
-  font-family: 'BigCalsonItalic', sans-serif;
+  font-family: "BigCalsonItalic", sans-serif;
 }
 
 .font-bigcalson {
-  font-family: 'BigCalson', sans-serif;
+  font-family: "BigCalson", sans-serif;
 }
 
 .font-inter-regular {
@@ -71,7 +73,6 @@ html, body {
   font-weight: 900;
   font-style: normal;
 }
-
 
 /*For the video background, referenced from 
 https://github.com/WhiskeyWeb/video-tutorials/blob/main/YouTube-hideinfo.css*/
