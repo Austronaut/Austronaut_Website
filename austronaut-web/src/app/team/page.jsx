@@ -26,6 +26,11 @@ const TeamPage = () => {
         "Alex Chen",
         "Emma Thompson",
       ],
+      color: {
+        spotlight: "rgba(220, 38, 38, 0.1)",
+        border: "border-red-600",
+        text: "text-red-600",
+      },
     },
     {
       name: "Payload Team",
@@ -40,6 +45,11 @@ const TeamPage = () => {
         />
       ),
       members: ["Dr. Michael Chen", "Lisa Wang", "David Park", "Rachel Kim"],
+      color: {
+        spotlight: "rgba(234, 88, 12, 0.1)",
+        border: "border-orange-600",
+        text: "text-orange-600",
+      },
     },
     {
       name: "Software Team",
@@ -54,21 +64,12 @@ const TeamPage = () => {
         />
       ),
       members: ["Divakar Dessai", "Ranbir Grover", "Dicko Evaldo"],
+      color: {
+        spotlight: "rgba(147, 51, 234, 0.1)",
+        border: "border-purple-600",
+        text: "text-purple-600",
+      },
     },
-    // {
-    //   name: "Operations Team",
-    //   image: "/team-images/operations-team.jpg",
-    //   icon: (
-    //     <Image
-    //       src="/logos/tether-logo.png"
-    //       alt="Operations Team Logo"
-    //       width={32}
-    //       height={32}
-    //       className="w-8 h-8"
-    //     />
-    //   ),
-    //   members: ["Chris Taylor", "Anna Garcia", "Mark Johnson", "Zoe Brown"],
-    // },
   ];
 
   return (
@@ -116,56 +117,57 @@ const TeamPage = () => {
             </h2>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-16">
             {teams.map((team, index) => (
               <div
                 key={index}
                 className="w-full transform hover:scale-105 transition duration-300 ease-in-out"
               >
-                <SpotlightCard
-                  className="p-8 border-white/20 border-2 rounded-2xl"
-                  spotlightColor="rgba(255, 255, 255, 0.1)"
-                >
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                    {/* Left Side: Team Name, Icon and Image */}
-                    <div className="text-center lg:text-left">
-                      <div className="flex justify-center lg:justify-start items-center gap-4 mb-6">
-                        {team.icon}
-                        <h3 className="text-2xl md:text-4xl font-inter-bold text-white">
-                          {team.name}
-                        </h3>
-                      </div>
-
-                      {/* Team Image */}
-                      <div className="flex justify-center lg:justify-start">
-                        <Image
-                          src={team.image}
-                          alt={`${team.name} photo`}
-                          width={400}
-                          height={260}
-                          className="w-full max-w-lg object-contain rounded-lg shadow-lg"
-                        />
-                      </div>
+                <div className="w-full flex justify-center bg-black py-8 px-4">
+                  <div className="flex flex-col md:flex-row-reverse rounded-2xl overflow-hidden w-full max-w-7xl gap-10 shadow-lg">
+                    <div className="w-full md:w-1/2 relative">
+                      <div className="absolute inset-0 bg-gradient-to-l from-black/30 to-transparent z-10 rounded-lg" />
+                      <Image
+                        src={team.image}
+                        alt={`${team.name} photo`}
+                        width={600}
+                        height={400}
+                        className={`w-full h-full object-contain ${team.color.border} border-3 rounded-2xl`}
+                      />
                     </div>
-
-                    {/* Right Side: Team Members */}
-                    <div className="space-y-3">
-                      <h4 className="text-xl font-inter-bold text-white mb-6 text-center lg:text-left">
+                    <SpotlightCard
+                      spotlightColor={team.color.spotlight}
+                      className={`${team.color.border} border-2 w-full md:w-1/2 h-full flex flex-col justify-center backdrop-blur-md bg-white/5 rounded-2xl p-8 md:p-12 text-white relative z-20`}
+                    >
+                      <p
+                        className={`text-sm ${team.color.text} uppercase font-inter-bold mb-2 tracking-wider`}
+                      >
+                        Team Spotlight
+                      </p>
+                      <div className="flex items-center gap-4 mb-6">
+                        {team.icon}
+                        <h2 className="text-4xl md:text-6xl font-inter-bold leading-tight">
+                          {team.name}
+                        </h2>
+                      </div>
+                      <h4 className="text-2xl font-inter-bold mb-6 text-gray-200">
                         Team Members
                       </h4>
-                      {team.members.map((member, memberIndex) => (
-                        <div
-                          key={memberIndex}
-                          className="py-4 px-6 bg-gray-800/50 rounded-lg border border-gray-700/30 hover:bg-gray-700/50 transition duration-200"
-                        >
-                          <p className="text-white font-inter-regular text-center lg:text-left text-lg">
-                            {member}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
+                      <div className="space-y-3">
+                        {team.members.map((member, memberIndex) => (
+                          <div
+                            key={memberIndex}
+                            className="py-3 px-5 bg-gray-800/30 rounded-lg border border-gray-700/20 hover:bg-gray-700/30 transition duration-200"
+                          >
+                            <p className="text-gray-200 font-inter-regular text-lg">
+                              {member}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </SpotlightCard>
                   </div>
-                </SpotlightCard>
+                </div>
               </div>
             ))}
           </div>
