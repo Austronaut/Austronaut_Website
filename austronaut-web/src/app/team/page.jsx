@@ -15,9 +15,9 @@ const TeamPage = () => {
         <Image
           src="/logos/busteam-logo.png"
           alt="Bus Team Logo"
-          width={32}
-          height={32}
-          className="w-8 h-8"
+          width={64} // Changed from 32 to 64
+          height={64} // Changed from 32 to 64
+          className="w-16 h-16" // Changed from w-8 h-8 to w-16 h-16
         />
       ),
       members: [
@@ -39,9 +39,9 @@ const TeamPage = () => {
         <Image
           src="/logos/instruments-logo.png"
           alt="Payload Team Logo"
-          width={32}
-          height={32}
-          className="w-8 h-8"
+          width={64} // Changed from 32 to 64
+          height={64} // Changed from 32 to 64
+          className="w-16 h-16" // Changed from w-8 h-8 to w-16 h-16
         />
       ),
       members: ["Dr. Michael Chen", "Lisa Wang", "David Park", "Rachel Kim"],
@@ -58,9 +58,9 @@ const TeamPage = () => {
         <Image
           src="/logos/software-logo.png"
           alt="Software Team Logo"
-          width={32}
-          height={32}
-          className="w-8 h-8"
+          width={64} // Changed from 32 to 64
+          height={64} // Changed from 32 to 64
+          className="w-16 h-16" // Changed from w-8 h-8 to w-16 h-16
         />
       ),
       members: ["Divakar Dessai", "Ranbir Grover", "Dicko Evaldo"],
