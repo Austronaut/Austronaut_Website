@@ -15,14 +15,27 @@ import QB50Section from "./landing-page/lp-qb50";
 import AndrewDempsterSection from "./landing-page/lp-ademp";
 import CurvedLoop from "@/components/ui/curved-loop";
 import ScrollVelocity from "@/components/ui/scrollvelocity";
+import Navbar from "@/components/ui/navbar";
 import WebsiteFooter from "./others/website-footer";
 
 export default function Home() {
   const [showVideo, setShowVideo] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setShowVideo(true), 500); // 3 second delay
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const videoHeight = window.innerHeight;
+      setShowNavbar(scrollY >= videoHeight);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const cards = [
@@ -92,6 +105,7 @@ export default function Home() {
 
   return (
     <div className="w-full h-full">
+      {showNavbar && <Navbar />}
       {/* 🚀 Hero Section: Fullscreen Video + Logo */}
       <div className="relative w-full h-[100svh] overflow-hidden">
         {/* YouTube Background Video with fade-in */}
@@ -155,24 +169,13 @@ export default function Home() {
         </div>
       </div>
 
-      {/* 🛰️ Mission Objective */}
-      {/* <div className="w-full flex justify-center px-4 bg-black">
-          <div className="justify-start text-white text-center px-8">
-            <p className="max-w-4xl text-xl leading-relaxed font-bigcalson-italic text-justify mx-auto">
-              Our mission is to advance space science
-              while providing real-world aerospace experience to the next generation
-              of engineers.
-            </p>
-          </div>
-      </div> */}
-
       {/*Need to create a seperate react jsx component file for this*/}
       <div className="w-full flex flex-col justify-center items-center mb-20 bg-black">
         <div className="w-full flex flex-col justify-center p-10 text-white bg-black">
           <h2 className="mb-7 text-center text-8xl font-inter-bold tracking-tight object-contain">
             Project 2027
           </h2>
-          <h2 className="mb-7 mb-1 text-center text-lg font-inter-regular tracking-tight">
+          <h2 className="mb-7 text-center text-lg font-inter-regular tracking-tight">
             To research, design and launch a 6U cubesat to measure space
             weather.
           </h2>

@@ -1,7 +1,8 @@
 "use client";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Image from "next/image";
 import Galaxy from "@/components/backgrounds/Galaxy/Galaxy";
+import Navbar from "@/components/ui/navbar";
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -11,6 +12,8 @@ export default function ContactPage() {
     message: "",
     team: "general",
   });
+
+  const MemoizedGalaxy = useMemo(() => <Galaxy density={0.6} glowIntensity={0.1} starSpeed={0.1} rotationSpeed={0} speed={0.4} twinkleIntensity={0.2} className="absolute inset-0 z-0" />, []);
 
   const recipientEmails = {
     general: "unswaustronauts@gmail.com",
@@ -42,9 +45,9 @@ export default function ContactPage() {
     "w-full p-3 text-white bg-black border border-gray-600 rounded-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:shadow-lg focus:scale-[1.02]";
 
   return (
-    <div className="relative w-full min-h-screen overflow-hidden">
-      {/* Full-page Galaxy background */}
-      <Galaxy className="absolute inset-0 z-0" />
+    <div className="relative w-full min-h-screen overflow-hidden font-inter-regular">
+      <Navbar/>
+      {MemoizedGalaxy}
 
       {/* Main content */}
       <div className="relative z-10 flex flex-col min-h-screen">
@@ -61,7 +64,7 @@ export default function ContactPage() {
             <h1 className="text-6xl font-inter-bold tracking-tight text-white drop-shadow-lg">
               Contact Us
             </h1>
-            <p className="mt-4 text-md font-inter-regular max-w-xl mx-auto text-gray-300">
+            <p className="mt-4 text-md font-inter-italic max-w-xl mx-auto text-gray-300">
               Whether you're interested in collaborating, sponsoring, or learning more about our mission,
               feel free to reach out below.
             </p>
@@ -73,7 +76,7 @@ export default function ContactPage() {
             className="w-full max-w-2xl rounded-2xl shadow-lg p-8 flex flex-col gap-6 bg-black/80 backdrop-blur-md"
           >
             <div>
-              <label htmlFor="name" className="block font-medium mb-2 text-gray-300">
+              <label htmlFor="name" className="font-inter-regular block font-medium mb-2 text-gray-300">
                 Your Name
               </label>
               <input
@@ -88,7 +91,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <label htmlFor="email" className="block font-medium mb-2 text-gray-300">
+              <label htmlFor="email" className="font-inter-regular block font-medium mb-2 text-gray-300">
                 Email Address
               </label>
               <input
@@ -103,7 +106,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <label htmlFor="subject" className="block font-medium mb-2 text-gray-300">
+              <label htmlFor="subject" className="font-inter-regular block font-medium mb-2 text-gray-300">
                 Subject
               </label>
               <input
@@ -118,7 +121,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <label htmlFor="team" className="block font-medium mb-2 text-gray-300">
+              <label htmlFor="team" className="font-inter-regular block font-medium mb-2 text-gray-300">
                 Choose Team to Contact
               </label>
               <select
@@ -136,7 +139,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <label htmlFor="message" className="block font-medium mb-2 text-gray-300">
+              <label htmlFor="message" className="font-inter-regular block font-medium mb-2 text-gray-300">
                 Message
               </label>
               <textarea
