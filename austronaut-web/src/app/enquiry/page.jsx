@@ -3,6 +3,7 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 import Galaxy from "@/components/backgrounds/Galaxy/Galaxy";
 import Navbar from "@/components/ui/navbar";
+import WebsiteFooter from "../others/website-footer";
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -42,7 +43,7 @@ export default function ContactPage() {
   };
 
   const inputClass =
-    "w-full p-3 text-white bg-black border border-gray-600 rounded-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:shadow-lg focus:scale-[1.02]";
+    "w-full p-3 text-white font-inter-regular bg-black border border-gray-600 rounded-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:shadow-lg focus:scale-[1.02]";
 
   return (
     <div className="relative w-full min-h-screen overflow-hidden font-inter-regular">
@@ -73,7 +74,8 @@ export default function ContactPage() {
           {/* Contact Form */}
           <form
             onSubmit={handleSubmit}
-            className="w-full max-w-2xl rounded-2xl shadow-lg p-8 flex flex-col gap-6 bg-black/80 backdrop-blur-md"
+            className="w-full max-w-2xl rounded-2xl shadow-lg p-8 flex flex-col gap-6
+            bg-gradient-to-br from-white/0 to-white/0 backdrop-blur-lg border border-white/30"
           >
             <div>
               <label htmlFor="name" className="font-inter-regular block font-medium mb-2 text-gray-300">
@@ -131,10 +133,10 @@ export default function ContactPage() {
                 onChange={handleChange}
                 className={inputClass}
               >
-                <option value="general">General</option>
-                <option value="instruments">Instruments</option>
-                <option value="bus">Business</option>
-                <option value="software">Software</option>
+                <option value="general" className="font-inter-regular">General</option>
+                <option value="instruments" className="font-inter-regular">Instruments</option>
+                <option value="bus" className="font-inter-regular">Business</option>
+                <option value="software" className="font-inter-regular">Software</option>
               </select>
             </div>
 
@@ -155,13 +157,18 @@ export default function ContactPage() {
 
             <button
               type="submit"
-              className="bg-blue-600 hover:bg-blue-700 active:scale-95 transition-all duration-200 ease-in-out text-white py-3 px-6 rounded-lg text-lg font-semibold shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="bg-white/20 backdrop-blur-md border border-white/30 
+                        font-inter-regular hover:bg-white/30 active:scale-95 
+                        transition-all duration-200 ease-in-out 
+                        text-white py-3 px-6 rounded-lg text-lg font-semibold 
+                        shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/40
+                        hover:cursor-pointer"
             >
               Send Message
             </button>
           </form>
         </main>
-
+        <WebsiteFooter />
       </div>
     </div>
   );

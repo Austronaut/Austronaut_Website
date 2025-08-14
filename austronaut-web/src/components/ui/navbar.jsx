@@ -14,14 +14,15 @@ export default function Navbar() {
             height={40}
             className="object-contain"
           />
-          <span className="text-xl font-inter-bold tracking-tight">Austronauts</span>
+          <span className="text-xl font-inter-bold tracking-tight">AUSTRONAUTS</span>
         </Link>
         <div className="space-x-6 text-sm tracking-tight font-inter-bold">
           {/* <Link href="#about" className="hover:text-yellow-400 transition">About</Link>
-          <Link href="#project" className="hover:text-yellow-400 transition">Project 2027</Link>
+          <Link href="#Project2025" className="hover:text-yellow-400 transition">Project 2027</Link>
           <Link href="#timeline" className="hover:text-yellow-400 transition">Timeline</Link>
           <Link href="#academic" className="hover:text-yellow-400 transition">Lead</Link> */}
-          <Link href="/enquiry" className="hover:text-yellow-400 transition">Contact</Link>
+          <Link href="/team" className="hover:text-yellow-400 font-inter-bold transition">OUR TEAM</Link>
+          <Link href="/enquiry" className="hover:text-yellow-400 font-inter-bold transition">CONTACT</Link>
         </div>
       </div>
     </nav>
