@@ -3,6 +3,7 @@ import { useState, useMemo } from "react";
 import Image from "next/image";
 import Galaxy from "@/components/backgrounds/Galaxy/Galaxy";
 import Navbar from "@/components/ui/navbar";
+import WebsiteFooter from "../others/website-footer";
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -167,7 +168,7 @@ export default function ContactPage() {
             </button>
           </form>
         </main>
-
+        <WebsiteFooter />
       </div>
     </div>
   );
