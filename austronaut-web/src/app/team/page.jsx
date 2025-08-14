@@ -99,10 +99,10 @@ const TeamPage = () => {
 
   return (
     <div className="w-full h-full bg-black text-white font-sans">
-      <section className="relative flex flex-col items-center justify-center py-25">
+      <section className="relative mt-20 flex flex-col items-center justify-center">
     
         {/* Circular Gallery - full width */}
-        <div className="w-full h-[1000px] md:h-[500px] mb-20 relative">
+        <div className="w-full h-[1000px] md:h-[500px] mb-20 relative hidden sm:block">
           <CircularGallery
             items={galleryItems}          // your gallery array
             bend={0}
@@ -114,7 +114,7 @@ const TeamPage = () => {
         </div>
 
         {/* Hero Text */}
-        <div className="relative z-10 text-center px-6">
+        <div className="relative z-10 text-center px-6 mb-10 sm:mb-20">
           <h1 className="text-5xl md:text-8xl font-inter-bold mb-6 tracking-tight">
             Meet The Team
           </h1>
