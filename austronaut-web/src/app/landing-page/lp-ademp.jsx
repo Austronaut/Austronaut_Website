@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel.jsx";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import SpotlightCard from "../../components/ui/spotlight.jsx";
+import SpotlightCard from "../../components/ui/spotlight";
 import ScrollVelocity from "@/components/ui/scrollvelocity";
 import AnimatedList from "@/components/ui/animated-list";
 import CurvedLoop from "@/components/ui/curved-loop";
