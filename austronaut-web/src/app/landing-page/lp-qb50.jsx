@@ -19,16 +19,19 @@ export default function QB50Section() {
             title: 'About QB50',
             description: 'Pioneered by UNSW, QB50 is an international mission that launched 50 CubeSats into low Earth orbit in 2016 to study the thermosphere.',
             videoSrc: '/videos/unsw-eco-part-one.mp4',
+            link: 'https://www.unsw.edu.au/research/acser/the-unsw-eco-qb50-au02-cubesat'
         },
         {
             title: 'Cubesat Development',
             description: 'UNSW-EC0 carried four payloads testing GPS, radiation resilience, microkernel stability, and 3D-printed material performance.',
             videoSrc: '/videos/unsw-eco-part-two.mp4',
+            link: "https://www.unsw.edu.au/research/acser/the-unsw-eco-qb50-au02-cubesat#:~:text=Mission%20basics-,CubeSat%20basics,-Explore%20system%20basics"
         },
         {
             title: 'Research Conducted',
             description: 'Our payload, The Ion Neutral Mass Spectrometer (INMS), gathered data on thermospheric particles to study atmospheric composition.',
             videoSrc: '/videos/unsw-eco-part-three.mp4',
+            link: "https://www.unsw.edu.au/research/acser/the-unsw-eco-qb50-au02-cubesat#:~:text=Experimental%20payload"
         },
     ];
 
@@ -48,8 +51,11 @@ export default function QB50Section() {
         </div>
         <div className="w-full p-5 md:p-20 flex flex-wrap justify-center gap-10">
             {cards.map((card, index) => (
-                <div
+                <a
                 key={index}
+                href={card.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="relative rounded-2xl shadow-md hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out w-full sm:w-[90%] md:w-[30%] h-80"
                 >
                     {/* Full video background */}
@@ -67,7 +73,7 @@ export default function QB50Section() {
                         <h3 className="text-2xl font-inter-bold-italic text-white mb-2 text-center">{card.title}</h3>
                         <p className="text-sm text-gray-200 font-inter-italic text-center">{card.description}</p>
                     </div>
-                </div>
+                </a>
             ))}
         </div>
     </div>
