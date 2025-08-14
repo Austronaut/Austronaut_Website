@@ -4,7 +4,8 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}", // Adjust based on your file structure
   ],
   theme: {
-    extend: {},
+    extend: {
+    }
   },
   plugins: [require("daisyui")], // <-- Add this line
 };
