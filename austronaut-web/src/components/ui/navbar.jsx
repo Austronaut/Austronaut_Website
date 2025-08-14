@@ -21,6 +21,7 @@ export default function Navbar() {
           <Link href="#Project2025" className="hover:text-yellow-400 transition">Project 2027</Link>
           <Link href="#timeline" className="hover:text-yellow-400 transition">Timeline</Link>
           <Link href="#academic" className="hover:text-yellow-400 transition">Lead</Link> */}
+          <Link href="/team" className="hover:text-yellow-400 font-inter-bold transition">OUR TEAM</Link>
           <Link href="/enquiry" className="hover:text-yellow-400 font-inter-bold transition">CONTACT</Link>
         </div>
       </div>
