@@ -11,6 +11,30 @@ const TeamPage = () => {
   // Team data structure
   const teams = [
     {
+      name: "The Leads",
+      image: "/teamphotos/leads.png",
+      description: "The Leads are the driving force behind each team, guiding technical direction, fostering collaboration, and ensuring every milestone is met. They bring expertise, passion, and leadership to turn ambitious ideas into successful missions.",
+      icon: (
+        <Image
+          src="/logos/busteam-logo.png"
+          alt="Bus Team Logo"
+          width={64} // Changed from 32 to 64
+          height={64} // Changed from 32 to 64
+          className="w-16 h-16" // Changed from w-8 h-8 to w-16 h-16
+        />
+      ),
+      members: [
+        "Micheal Montiel",
+        "Ray Feng",
+        "Divakar Dessai",
+      ],
+      color: {
+        spotlight: "rgba(220, 172, 38, 0.1)",
+        border: "border-yellow-600",
+        text: "text-yellow-600",
+      },
+    },
+    {
       name: "Bus Team",
       image: "/teamphotos/bus.png",
       description: "Responsible for designing and building the bus systems that connect and support the CubeSats. They ensure reliable power, communication, and structural integrity throughout the mission",
@@ -147,7 +171,7 @@ const TeamPage = () => {
                 <div className="w-full flex justify-center bg-black py-8 px-4">
                   <div className="flex flex-col md:flex-row rounded-2xl overflow-hidden w-full max-w-7xl gap-10 shadow-lg">
                     <div className="w-full md:w-1/2 relative">
-                      <div className="absolute inset-0 bg-gradient-to-l from-black/30 to-transparent z-10 rounded-lg" />
+                      <div className="absolute inset-0 bg-gradient-to-l from-black/5 to-transparent z-10 rounded-lg" />
                       <Image
                         src={team.image}
                         alt={`${team.name} photo`}
