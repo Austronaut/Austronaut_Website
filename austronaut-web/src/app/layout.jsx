@@ -15,6 +15,11 @@ const inter = Inter({
   display: "swap",
 });
 
+export const metadata = {
+  title: "AUStronauts",
+  description: "Aude Machinari",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${inter.variable}`}>
