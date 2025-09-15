@@ -17,6 +17,7 @@ import CurvedLoop from "@/components/ui/curved-loop";
 import ScrollVelocity from "@/components/ui/scrollvelocity";
 import Navbar from "@/components/ui/navbar";
 import WebsiteFooter from "./others/website-footer";
+import Popup from "@/components/ui/popup";
 
 export default function Home() {
   const [showVideo, setShowVideo] = useState(false);
@@ -106,6 +107,7 @@ export default function Home() {
   return (
     <div className="w-full h-full">
       {showNavbar && <Navbar />}
+      {showNavbar && <Popup />}
       {/* 🚀 Hero Section: Fullscreen Video + Logo */}
       <div className="relative w-full h-[100svh] overflow-hidden">
         {/* YouTube Background Video with fade-in */}
