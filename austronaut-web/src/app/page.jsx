@@ -111,7 +111,7 @@ export default function Home() {
         {/* YouTube Background Video with fade-in */}
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
-          src="/videos/lp-hero-compressed-bg.mp4"
+          src="/videos/lp-hero-high-compressed-bg.mp4"
           autoPlay
           muted
           loop
