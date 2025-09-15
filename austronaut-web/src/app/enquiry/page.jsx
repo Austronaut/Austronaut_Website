@@ -4,6 +4,7 @@ import Image from "next/image";
 import Galaxy from "@/components/backgrounds/Galaxy/Galaxy";
 import Navbar from "@/components/ui/navbar";
 import WebsiteFooter from "../others/website-footer";
+import Popup from "@/components/ui/popup";
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -48,6 +49,7 @@ export default function ContactPage() {
   return (
     <div className="relative w-full min-h-screen overflow-hidden font-inter-regular">
       <Navbar/>
+      <Popup/>
       {MemoizedGalaxy}
 
       {/* Main content */}

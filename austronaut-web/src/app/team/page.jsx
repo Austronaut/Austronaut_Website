@@ -6,6 +6,7 @@ import SpotlightCard from "../../components/ui/spotlight";
 import AndrewDempsterSection from "../landing-page/lp-ademp"; // Add this line
 import CircularGallery from "@/components/ui/circular-gallery";
 import Navbar from "@/components/ui/navbar";
+import Popup from "@/components/ui/popup";
 
 const TeamPage = () => {
   // Team data structure
@@ -149,6 +150,7 @@ const TeamPage = () => {
       </section>
 
       <Navbar/>
+      <Popup/>
 
       {/* Academic Lead Section
       <div className="w-full">
