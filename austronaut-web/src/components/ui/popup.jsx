@@ -8,7 +8,7 @@ export default function Popup() {
          APPLICATIONS OPEN FOR TECHNICAL TEAM
         </span>
         <a
-          href="https://www.unsw.edu.au/challeng/vertically-integrated-projects/student-information/vip-application-process"
+          href="https://www.unsw.edu.au/challeng/vertically-integrated-projects/explore-vertically-integrated-projects/austronauts"
           target="_blank"
           rel="noopener noreferrer"
           className="ml-4 text-sm text-center sm:text-md font-inter-bold tracking-tight px-3 py-1 rounded-lg border border-white bg-black text-white hover:border-yellow-400 hover:text-yellow-400 transition"
