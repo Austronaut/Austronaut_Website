@@ -66,7 +66,7 @@ export default function Home() {
     {
       title: "Our Mission",
       description:
-        "Developing a 6U CubeSat with innovative tether payloads to explore Earth’s ionosphere by 2027",
+        "Developing a 3U CubeSat with innovative tether payloads to explore Earth’s ionosphere by 2027",
       icon: (
         <svg
           className="w-6 h-6 text-gray-800 dark:text-white"
@@ -178,7 +178,7 @@ export default function Home() {
             Project 2027
           </h2>
           <h2 className="mb-7 text-center text-lg font-inter-regular tracking-tight">
-            To research, design and launch a 6U cubesat to measure space
+            To research, design and launch a 3U cubesat to measure space
             weather.
           </h2>
         </div>
