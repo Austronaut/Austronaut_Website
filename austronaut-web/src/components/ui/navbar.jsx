@@ -19,6 +19,7 @@ export default function Navbar() {
         <div className="space-x-4 sm:space-x-6 text-xs sm:text-sm tracking-tight font-inter-bold">
           <Link href="/team" className="hover:text-yellow-400 font-inter-bold transition">OUR TEAM</Link>
           <Link href="/enquiry" className="hover:text-yellow-400 font-inter-bold transition">CONTACT</Link>
+          <Link href="/blog" className="hover:text-yellow-400 font-inter-bold transition">BLOG</Link>
         </div>
       </div>
     </nav>
