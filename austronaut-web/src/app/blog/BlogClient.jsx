@@ -28,7 +28,7 @@ export default function BlogClient({ posts }) {
   );
 
   return (
-    <div className="relative w-full min-h-screen overflow-hidden font-sans">
+    <div className="relative w-full min-h-screen overflow-hidden font-inter-regular">
       <Navbar />
       <Popup />
       {MemoizedGalaxy}
@@ -64,7 +64,7 @@ export default function BlogClient({ posts }) {
               >
                 <button
                   onClick={() => setSelectedPost(null)}
-                  className="text-gray-300 hover:text-white transition mb-6 underline underline-offset-4"
+                  className="text-gray-300 hover:text-white transition mb-6 underline underline-offset-4 font-inter-regular"
                 >
                   ← Back to posts
                 </button>
@@ -78,14 +78,14 @@ export default function BlogClient({ posts }) {
                   />
                 </div>
 
-                <h2 className="text-2xl font-bold text-gray-200">
+                <h2 className="text-2xl font-inter-bold text-gray-200">
                   {selectedPost.title}
                 </h2>
-                <p className="mt-2 text-sm font-normal text-gray-300">
+                <p className="mt-2 text-sm font-inter-regular text-gray-300">
                   {selectedPost.handle}
                 </p>
 
-                <div className="mt-6 text-gray-200 leading-relaxed">
+                <div className="mt-6 text-gray-200 leading-relaxed font-inter-regular">
                   <PortableText value={selectedPost.content} />
                 </div>
               </article>
