@@ -1,16 +1,16 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Galaxy from "@/components/backgrounds/Galaxy/Galaxy";
 import Navbar from "@/components/ui/navbar";
 import Popup from "@/components/ui/popup";
 import WebsiteFooter from "../others/website-footer";
 import ChromaGrid from "@/components/ui/chromagrid";
-import { PortableText } from "@portabletext/react";
 
 export default function BlogClient({ posts }) {
-  const [selectedPost, setSelectedPost] = useState(null);
+  const router = useRouter();
 
   const MemoizedGalaxy = useMemo(
     () => (
@@ -52,44 +52,11 @@ export default function BlogClient({ posts }) {
           </div>
 
           <div className="w-full max-w-6xl">
-            {!selectedPost ? (
-              <ChromaGrid
-                items={posts}
-                onSelect={(post) => setSelectedPost(post)}
-                className="justify-center"
-              />
-            ) : (
-              <article className="w-full max-w-3xl mx-auto rounded-2xl shadow-lg p-6 md:p-8
-                bg-gradient-to-br from-white/0 to-white/0 backdrop-blur-lg border border-white/30"
-              >
-                <button
-                  onClick={() => setSelectedPost(null)}
-                  className="text-gray-300 hover:text-white transition mb-6 underline underline-offset-4 font-inter-regular"
-                >
-                  ← Back to posts
-                </button>
-
-                <div className="relative w-full h-[240px] md:h-[360px] rounded-2xl overflow-hidden border border-white/20 mb-6">
-                  <Image
-                    src={selectedPost.image}
-                    alt={selectedPost.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-
-                <h2 className="text-2xl font-inter-bold text-gray-200">
-                  {selectedPost.title}
-                </h2>
-                <p className="mt-2 text-sm font-inter-regular text-gray-300">
-                  {selectedPost.handle}
-                </p>
-
-                <div className="mt-6 text-gray-200 leading-relaxed font-inter-regular">
-                  <PortableText value={selectedPost.content} />
-                </div>
-              </article>
-            )}
+            <ChromaGrid
+              items={posts}
+              onSelect={(post) => router.push(`/blog/${post.slug}`)}
+              className="justify-center"
+            />
           </div>
         </main>
 
