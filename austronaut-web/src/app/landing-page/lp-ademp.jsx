@@ -30,7 +30,7 @@ export default function AndrewDempsterSection() {
         <div className="w-full md:w-1/2 relative">
           <div className="absolute inset-0 bg-gradient-to-l from-black/30 to-transparent z-10 rounded-lg" />
           <img
-            src="/lpphotos/ab-2.png"
+            src="/lpphotos/ab-2.webp"
             alt="Andrew Dempster Headshot"
             className="w-full h-full object-cover border-yellow-600 border-3 rounded-2xl"
           />

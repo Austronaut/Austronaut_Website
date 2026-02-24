@@ -66,6 +66,7 @@ export default function QB50Section() {
                         muted
                         loop
                         playsInline
+                        preload="none"
                     />
 
                 {/* Overlay */}
