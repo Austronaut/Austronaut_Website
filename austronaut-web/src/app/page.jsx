@@ -118,6 +118,7 @@ export default function Home() {
           muted
           loop
           playsInline
+          preload="none"
         />
 
         {/* Optional overlay for better contrast */}
