@@ -13,7 +13,7 @@ const TeamPage = () => {
   const teams = [
     {
       name: "The Leads",
-      image: "/teamphotos/leads.png",
+      image: "/teamphotos/leads.webp",
       description: "The Leads are the driving force behind each team, guiding technical direction, fostering collaboration, and ensuring every milestone is met. They bring expertise, passion, and leadership to turn ambitious ideas into successful missions.",
       icon: (
         <Image
@@ -37,7 +37,7 @@ const TeamPage = () => {
     },
     {
       name: "Bus Team",
-      image: "/teamphotos/bus.png",
+      image: "/teamphotos/bus.webp",
       description: "Responsible for designing and building the bus systems that connect and support the CubeSats. They ensure reliable power, communication, and structural integrity throughout the mission",
       icon: (
         <Image
@@ -65,7 +65,7 @@ const TeamPage = () => {
     },
     {
       name: "Payload Team",
-      image: "/teamphotos/payloads.png",
+      image: "/teamphotos/payloads.webp",
       description: "Focuses on scientific instruments and experiments, developing payloads that gather and transmit critical data from space. They handle sensors, instrumentation, and experiment integration.",
       icon: (
         <Image
@@ -92,7 +92,7 @@ const TeamPage = () => {
     },
     {
       name: "Software Team",
-      image: "/teamphotos/software.png",
+      image: "/teamphotos/software.webp",
       description: "Develops the mission-critical software, from flight control to data analysis. They manage the CubeSat’s onboard systems, communication protocols, and ground-station software for seamless operation.",
       icon: (
         <Image
@@ -113,13 +113,13 @@ const TeamPage = () => {
   ];
 
   const galleryItems = [
-    { image: "/instagram-photos/1.png", text: "" },
-    { image: "/instagram-photos/2.png", text: "" },
-    { image: "/instagram-photos/3.png", text: "" },
-    { image: "/instagram-photos/4.png", text: "" },
-    { image: "/instagram-photos/5.png", text: "" },
-    { image: "/instagram-photos/6.png", text: "" },
-    { image: "/instagram-photos/7.png", text: "" },
+    { image: "/instagram-photos/1.webp", text: "" },
+    { image: "/instagram-photos/2.webp", text: "" },
+    { image: "/instagram-photos/3.webp", text: "" },
+    { image: "/instagram-photos/4.webp", text: "" },
+    { image: "/instagram-photos/5.webp", text: "" },
+    { image: "/instagram-photos/6.webp", text: "" },
+    { image: "/instagram-photos/7.webp", text: "" },
   ];
 
   return (
