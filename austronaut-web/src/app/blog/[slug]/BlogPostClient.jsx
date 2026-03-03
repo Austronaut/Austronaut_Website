@@ -28,7 +28,7 @@ export default function BlogPostClient({ children }) {
               href="/blog"
               className="inline-flex items-center gap-2 text-gray-300 hover:text-yellow-400 font-inter-bold transition"
             >
-              ← Back to posts
+              ← Back To Posts
             </Link>
           </div>
           {children}
