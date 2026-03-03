@@ -4,12 +4,12 @@ import { gsap } from "gsap";
 
 const ChromaGrid = ({
   items = [],
-  onSelect,             
+  onSelect,
   className = "",
   radius = 300,
   damping = 0.45,
   fadeOut = 0.6,
-  ease = "power3.out"
+  ease = "power3.out",
 }) => {
   const rootRef = useRef(null);
   const fadeRef = useRef(null);
@@ -41,7 +41,7 @@ const ChromaGrid = ({
         setX.current?.(pos.current.x);
         setY.current?.(pos.current.y);
       },
-      overwrite: true
+      overwrite: true,
     });
   };
 
@@ -53,7 +53,11 @@ const ChromaGrid = ({
   };
 
   const handleLeave = () => {
-    gsap.to(fadeRef.current, { opacity: 1, duration: fadeOut, overwrite: true });
+    gsap.to(fadeRef.current, {
+      opacity: 1,
+      duration: fadeOut,
+      overwrite: true,
+    });
   };
 
   const handleCardClick = (item) => {
@@ -76,11 +80,13 @@ const ChromaGrid = ({
       ref={rootRef}
       onPointerMove={handleMove}
       onPointerLeave={handleLeave}
-      className={`relative w-full h-full flex flex-wrap justify-center items-start gap-3 ${className}`}
+      className={`relative w-full h-full grid grid-cols-[repeat(auto-fill,360px)] justify-center gap-6 ${className}`}
+      // className={`relative w-full h-full flex flex-wrap justify-center items-start gap-3 ${className}`}
+      // className={`relative w-full h-full grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] justify-items-start gap-3 ${className}`}
       style={{
         "--r": `${radius}px`,
         "--x": "50%",
-        "--y": "50%"
+        "--y": "50%",
       }}
     >
       {items.length === 0 && (
@@ -92,42 +98,40 @@ const ChromaGrid = ({
           key={c.id ?? c.slug ?? i}
           onMouseMove={handleCardMove}
           onClick={() => handleCardClick(c)}
-          className={`group relative flex flex-col w-[300px] rounded-[20px] overflow-hidden border-2 border-transparent transition-colors duration-300 ${
+          className={`group relative flex flex-col w-[360px] h-[320px] rounded-[20px] overflow-hidden border border-white/20 transition-colors duration-300 ${
             onSelect || c.href ? "cursor-pointer" : "cursor-default"
           }`}
-          style={{
-            "--card-border": c.borderColor || "transparent",
-            background: c.gradient || "linear-gradient(180deg,#111,#000)",
-            "--spotlight-color": "rgba(255,255,255,0.3)"
-          }}
         >
+          {/* Background image */}
+          {c.image && (
+            <img
+              src={c.image}
+              alt={c.title || "card image"}
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          )}
+
+          {/* Spotlight effect */}
           <div
             className="absolute inset-0 pointer-events-none transition-opacity duration-500 z-20 opacity-0 group-hover:opacity-100"
             style={{
               background:
-                "radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 70%)"
+                "radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 70%)",
             }}
           />
 
-          <div className="relative z-10 flex-1 p-[10px] box-border">
-            {c.image ? (
-              <img
-                src={c.image}
-                alt={c.title || "card image"}
-                loading="lazy"
-                className="w-full h-[220px] object-cover rounded-[10px]"
-              />
-            ) : (
-              <div className="w-full h-[220px] rounded-[10px] bg-white/10" />
+          {/* Gradient overlay + text */}
+          <div className="relative z-10 w-full h-full flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/40 to-transparent p-5">
+            <h3 className="text-[1.05rem] font-inter-bold text-white mb-1">
+              {c.title}
+            </h3>
+            {c.subtitle && (
+              <p className="text-[0.85rem] opacity-85 font-inter-regular text-gray-300">
+                {c.subtitle}
+              </p>
             )}
           </div>
-
-          <footer className="relative z-10 p-3 text-white font-sans grid grid-cols-[1fr_auto] gap-x-3 gap-y-1">
-            <h3 className="m-0 text-[1.05rem] font-inter-bold">{c.title}</h3>
-            {c.handle && <span className="text-[0.95rem] opacity-80 text-right font-inter-regular">{c.handle}</span>}
-            {c.subtitle && <p className="m-0 text-[0.85rem] opacity-85 font-inter-regular">{c.subtitle}</p>}
-            {c.location && <span className="text-[0.85rem] opacity-85 text-right font-inter-regular">{c.location}</span>}
-          </footer>
         </article>
       ))}
 
@@ -135,13 +139,13 @@ const ChromaGrid = ({
       <div
         className="absolute inset-0 pointer-events-none z-30"
         style={{
-          backdropFilter: "grayscale(1) brightness(0.78)",
-          WebkitBackdropFilter: "grayscale(1) brightness(0.78)",
+          backdropFilter: "grayscale(0.6) brightness(0.78)",
+          WebkitBackdropFilter: "grayscale(0.6) brightness(0.78)",
           background: "rgba(0,0,0,0.001)",
           maskImage:
             "radial-gradient(circle var(--r) at var(--x) var(--y),transparent 0%,transparent 15%,rgba(0,0,0,0.10) 30%,rgba(0,0,0,0.22)45%,rgba(0,0,0,0.35)60%,rgba(0,0,0,0.50)75%,rgba(0,0,0,0.68)88%,white 100%)",
           WebkitMaskImage:
-            "radial-gradient(circle var(--r) at var(--x) var(--y),transparent 0%,transparent 15%,rgba(0,0,0,0.10) 30%,rgba(0,0,0,0.22)45%,rgba(0,0,0,0.35)60%,rgba(0,0,0,0.50)75%,rgba(0,0,0,0.68)88%,white 100%)"
+            "radial-gradient(circle var(--r) at var(--x) var(--y),transparent 0%,transparent 15%,rgba(0,0,0,0.10) 30%,rgba(0,0,0,0.22)45%,rgba(0,0,0,0.35)60%,rgba(0,0,0,0.50)75%,rgba(0,0,0,0.68)88%,white 100%)",
         }}
       />
 
@@ -150,14 +154,14 @@ const ChromaGrid = ({
         ref={fadeRef}
         className="absolute inset-0 pointer-events-none transition-opacity duration-[250ms] z-40"
         style={{
-          backdropFilter: "grayscale(1) brightness(0.78)",
-          WebkitBackdropFilter: "grayscale(1) brightness(0.78)",
+          backdropFilter: "grayscale(0.6) brightness(0.78)",
+          WebkitBackdropFilter: "grayscale(0.6) brightness(0.78)",
           background: "rgba(0,0,0,0.001)",
           maskImage:
             "radial-gradient(circle var(--r) at var(--x) var(--y),white 0%,white 15%,rgba(255,255,255,0.90)30%,rgba(255,255,255,0.78)45%,rgba(255,255,255,0.65)60%,rgba(255,255,255,0.50)75%,rgba(255,255,255,0.32)88%,transparent 100%)",
           WebkitMaskImage:
             "radial-gradient(circle var(--r) at var(--x) var(--y),white 0%,white 15%,rgba(255,255,255,0.90)30%,rgba(255,255,255,0.78)45%,rgba(255,255,255,0.65)60%,rgba(255,255,255,0.50)75%,rgba(255,255,255,0.32)88%,transparent 100%)",
-          opacity: 1
+          opacity: 1,
         }}
       />
     </div>
@@ -165,4 +169,3 @@ const ChromaGrid = ({
 };
 
 export default ChromaGrid;
-

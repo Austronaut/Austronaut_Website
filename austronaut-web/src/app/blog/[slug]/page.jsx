@@ -38,11 +38,11 @@ export default async function BlogPostPage({ params }) {
   return (
     <BlogPostClient>
       <article
-        className="w-full max-w-3xl mx-auto rounded-2xl shadow-lg p-6 md:p-8
+        className="w-full max-w-5xl mx-auto rounded-2xl shadow-lg p-6 md:p-8
         bg-gradient-to-br from-white/0 to-white/0 backdrop-blur-lg border border-white/30"
       >
         {post.mainImage && (
-          <div className="relative w-full h-[240px] md:h-[360px] rounded-2xl overflow-hidden border border-white/20 mb-6">
+          <div className="relative w-full h-[500px] rounded-2xl overflow-hidden border border-white/20 mb-6">
             <Image
               src={urlFor(post.mainImage).width(1200).url()}
               alt={post.title}
