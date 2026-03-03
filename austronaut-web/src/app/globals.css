@@ -2,7 +2,7 @@
 @plugin "daisyui";
 
 :root {
-  --font-main: 'BigCalson', serif;
+  --font-main: 'Inter', serif;
   --color--foreground: #ffffff;
   --color--background: #000000;
 }
