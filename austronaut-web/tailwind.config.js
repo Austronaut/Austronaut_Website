@@ -7,5 +7,8 @@ module.exports = {
     extend: {
     }
   },
-  plugins: [require("daisyui")], // <-- Add this line
+  plugins: [
+    require("daisyui"),
+    require("@tailwindcss/typography"),  
+  ], // <-- Add this line
 };

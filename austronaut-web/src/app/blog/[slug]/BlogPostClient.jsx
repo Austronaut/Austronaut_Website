@@ -23,14 +23,6 @@ export default function BlogPostClient({ children }) {
 
       <div className="relative z-10 flex flex-col min-h-screen">
         <main className="flex-grow w-full flex flex-col items-center py-16 px-4">
-          <div className="w-full max-w-5xl mb-6">
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-2 text-gray-300 hover:text-yellow-400 font-inter-bold transition"
-            >
-              ← Back To Posts
-            </Link>
-          </div>
           {children}
         </main>
 

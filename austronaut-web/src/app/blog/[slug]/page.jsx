@@ -3,6 +3,7 @@ import { urlFor } from "@/sanity/lib/image";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import BlogPostClient from "./BlogPostClient";
+import Link from "next/link";
 
 const POST_QUERY = `
   *[_type == "post" && slug.current == $slug][0]{
@@ -38,11 +39,18 @@ export default async function BlogPostPage({ params }) {
   return (
     <BlogPostClient>
       <article
-        className="w-full max-w-5xl mx-auto rounded-2xl shadow-lg p-6 md:p-8
-        bg-gradient-to-br from-white/0 to-white/0 backdrop-blur-lg border border-white/30"
+        className="w-full max-w-5xl mx-auto rounded-2xl shadow-lg p-6 md:p-8"
       >
+      <div className="w-full max-w-5xl mb-4">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 text-gray-300 hover:text-yellow-400 font-inter-bold transition"
+          >
+            ← BACK TO BLOGS
+          </Link>
+        </div>
         {post.mainImage && (
-          <div className="relative w-full h-[500px] rounded-2xl overflow-hidden border border-white/20 mb-6">
+          <div className="relative w-full h-[500px] rounded-2xl overflow-hidden mb-6">
             <Image
               src={urlFor(post.mainImage).width(1200).url()}
               alt={post.title}
@@ -52,7 +60,7 @@ export default async function BlogPostPage({ params }) {
           </div>
         )}
 
-        <h1 className="text-3xl font-inter-bold text-gray-200">
+        <h1 className="sm:text-6xl text-4xl font-inter-bold text-gray-200">
           {post.title}
         </h1>
 
